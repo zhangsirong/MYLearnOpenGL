@@ -81,11 +81,17 @@ int main()
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
     
-    //画一个三角形
+
+    //画一个距形
     GLfloat vertices[] = {
-        -0.5f, -0.5f, 0.0f, // Left
-        0.5f, -0.5f, 0.0f, // Right
-        0.0f,  0.5f, 0.0f  // Top
+      // First triangle
+       0.5f,  0.5f, 0.0f,  // Top Right
+       0.5f, -0.5f, 0.0f, // Bottom Right
+      -0.5f,  0.5f, 0.0f, // Top Left
+      // Second triangle
+       0.5f, -0.5f, 0.0f, // Bottom Right
+      -0.5f, -0.5f, 0.0f,  // Bottom Left
+      -0.5f,  0.5f, 0.0f   // Top Left
     };
     
     GLuint VBO, VAO;
@@ -107,15 +113,12 @@ int main()
     
     while (!glfwWindowShouldClose(window))
     {
-
         glfwPollEvents();
-        
-
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         glUseProgram(shaderProgram);
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawArrays(GL_TRIANGLES, 0, 6);
         glBindVertexArray(0);
         
         glfwSwapBuffers(window);
