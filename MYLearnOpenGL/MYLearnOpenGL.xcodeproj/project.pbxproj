@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840C0EC81DF144AA00B25EB1 /* hellowindow2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840C0EC71DF144AA00B25EB1 /* hellowindow2.cpp */; };
+		1FE77A9C1DF2A13400E5BB6B /* hellotriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
 		840C0ED21DF1452100B25EB1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED11DF1452100B25EB1 /* OpenGL.framework */; };
 		840C0ED41DF1452B00B25EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED31DF1452B00B25EB1 /* CoreVideo.framework */; };
@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellotriangle.cpp; sourceTree = "<group>"; };
 		840C0EC41DF144AA00B25EB1 /* MYLearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MYLearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C0EC71DF144AA00B25EB1 /* hellowindow2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hellowindow2.cpp; sourceTree = "<group>"; };
 		840C0ECF1DF1451700B25EB1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -80,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				840C0EC71DF144AA00B25EB1 /* hellowindow2.cpp */,
+				1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */,
 			);
 			path = MYLearnOpenGL;
 			sourceTree = "<group>";
@@ -155,7 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840C0EC81DF144AA00B25EB1 /* hellowindow2.cpp in Sources */,
+				1FE77A9C1DF2A13400E5BB6B /* hellotriangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +296,7 @@
 				840C0ECD1DF144AA00B25EB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
