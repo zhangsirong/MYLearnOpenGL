@@ -21,6 +21,13 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
 "color = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
 "}\n\0";
 
+const GLchar* fragmentShader2Source = "#version 330 core\n"
+"out vec4 color;\n"
+"void main()\n"
+"{\n"
+"color = vec4(1.0f, 1.0f, 0.0f, 1.0f); // The color yellow \n"
+"}\n\0";
+
 int main()
 {
     glfwInit();
@@ -78,6 +85,17 @@ int main()
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
     }
+    
+    GLuint fragmentShader2 = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader2,1, &fragmentShader2Source, NULL);
+    glCompileShader(fragmentShader2);
+    
+    GLuint shaderProgram2 = glCreateProgram();
+    glAttachShader(shaderProgram2, vertexShader);
+    glAttachShader(shaderProgram2, fragmentShader2);
+    glLinkProgram(shaderProgram2);
+    glDeleteShader(fragmentShader2);
+    
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
     
@@ -124,6 +142,8 @@ int main()
         glBindVertexArray(VAOs[0]);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         
+        glUseProgram(shaderProgram2);
+
         glBindVertexArray(VAOs[1]);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         
