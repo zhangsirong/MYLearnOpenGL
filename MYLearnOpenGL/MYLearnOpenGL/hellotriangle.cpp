@@ -118,6 +118,9 @@ int main()
     while (!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
+        
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //线框模式
+        
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         glUseProgram(shaderProgram);
