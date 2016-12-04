@@ -146,8 +146,13 @@ int main()
         lightingShader.Use();
         GLint objectColorLoc = glGetUniformLocation(lightingShader.Program, "objectColor");
         GLint lightColorLoc  = glGetUniformLocation(lightingShader.Program, "lightColor");
-        glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f); //珊瑚红
-        glUniform3f(lightColorLoc,  1.0f, 0.5f, 1.0f);  //光源白色
+        GLint lightPosLoc = glGetUniformLocation(lightingShader.Program, "lightPos");
+        GLint viewPosLoc = glGetUniformLocation(lightingShader.Program, "viewPos");
+        
+        glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);
+        glUniform3f(lightColorLoc,  1.0f, 1.0f, 1.0f);
+        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+        glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
         
         //坐标变化
         glm::mat4 view;
@@ -157,10 +162,7 @@ int main()
         GLint modelLoc = glGetUniformLocation(lightingShader.Program, "model");
         GLint viewLoc  = glGetUniformLocation(lightingShader.Program,  "view");
         GLint projLoc  = glGetUniformLocation(lightingShader.Program,  "projection");
-        GLint lightPosLoc = glGetUniformLocation(lightingShader.Program, "lightPos");
         
-        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
-
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
         
