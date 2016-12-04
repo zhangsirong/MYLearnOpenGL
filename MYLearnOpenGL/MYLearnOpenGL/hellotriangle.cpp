@@ -58,6 +58,9 @@ int main()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
+        GLfloat offset = 0.5f;
+        glUniform1f(glGetUniformLocation(ourShader.Program, "xOffset"), offset);
+        
         //颜色渐变
         GLfloat timeValue = glfwGetTime();
         GLfloat greenValue = (sin(timeValue) / 2) + 0.5;
