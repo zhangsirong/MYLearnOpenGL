@@ -170,7 +170,14 @@ int main()
         //坐标变化
         glm::mat4 view;
         glm::mat4 projection;
-        view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0));
+
+        GLfloat radius = 10.0;
+        GLfloat camX = sin(glfwGetTime()) * radius;
+        GLfloat camZ = cos(glfwGetTime()) * radius;
+        view = glm::lookAt(glm::vec3(camX, 0.0, camZ),  //摄像机位置
+                           glm::vec3(0.0, 0.0, 0.0),    //目标位置
+                           glm::vec3(0.0, 1.0, 0.0));   //上向量 确定摄像机怎么放置
+        
         projection = glm::perspective(45.0f, (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.1f, 100.0f);
 
         GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
