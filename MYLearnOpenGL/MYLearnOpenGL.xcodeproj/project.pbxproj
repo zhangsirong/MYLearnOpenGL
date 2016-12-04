@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD21DF3E91000BEF58E /* awesomeface.png */; };
+		1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD31DF3E91000BEF58E /* container.jpg */; };
+		1F10DCE71DF3EC6C00BEF58E /* texture.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCE21DF3E95300BEF58E /* texture.frag */; };
+		1F10DCE81DF3EC6C00BEF58E /* texture.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCE31DF3E95300BEF58E /* texture.vs */; };
+		1F10DCEC1DF3ED1B00BEF58E /* mytextures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F10DCEB1DF3ED1B00BEF58E /* mytextures.cpp */; };
 		1FC3ED541DF2BD5E00714113 /* basic.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FC3ED521DF2BD4E00714113 /* basic.frag */; };
 		1FC3ED551DF2BD5E00714113 /* basic.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FC3ED531DF2BD4E00714113 /* basic.vs */; };
-		1FE77A9C1DF2A13400E5BB6B /* hellotriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
 		840C0ED21DF1452100B25EB1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED11DF1452100B25EB1 /* OpenGL.framework */; };
 		840C0ED41DF1452B00B25EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED31DF1452B00B25EB1 /* CoreVideo.framework */; };
@@ -26,6 +30,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				1F10DCE71DF3EC6C00BEF58E /* texture.frag in CopyFiles */,
+				1F10DCE81DF3EC6C00BEF58E /* texture.vs in CopyFiles */,
+				1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */,
+				1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */,
 				1FC3ED541DF2BD5E00714113 /* basic.frag in CopyFiles */,
 				1FC3ED551DF2BD5E00714113 /* basic.vs in CopyFiles */,
 			);
@@ -34,6 +42,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F10DCD21DF3E91000BEF58E /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		1F10DCD31DF3E91000BEF58E /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		1F10DCE21DF3E95300BEF58E /* texture.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = texture.frag; sourceTree = "<group>"; };
+		1F10DCE31DF3E95300BEF58E /* texture.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = texture.vs; sourceTree = "<group>"; };
+		1F10DCEB1DF3ED1B00BEF58E /* mytextures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mytextures.cpp; sourceTree = "<group>"; };
 		1FC3ED521DF2BD4E00714113 /* basic.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = basic.frag; sourceTree = "<group>"; };
 		1FC3ED531DF2BD4E00714113 /* basic.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
 		1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellotriangle.cpp; sourceTree = "<group>"; };
@@ -66,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F10DCA51DF3E91000BEF58E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F10DCD11DF3E91000BEF58E /* textures */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		1F10DCD11DF3E91000BEF58E /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				1F10DCD21DF3E91000BEF58E /* awesomeface.png */,
+				1F10DCD31DF3E91000BEF58E /* container.jpg */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
 		840C0EBB1DF144AA00B25EB1 = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +116,12 @@
 		840C0EC61DF144AA00B25EB1 /* MYLearnOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				1F10DCA51DF3E91000BEF58E /* resources */,
+				1F10DCEB1DF3ED1B00BEF58E /* mytextures.cpp */,
 				840C0EC71DF144AA00B25EB1 /* hellowindow2.cpp */,
 				1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */,
+				1F10DCE21DF3E95300BEF58E /* texture.frag */,
+				1F10DCE31DF3E95300BEF58E /* texture.vs */,
 				1FC3ED521DF2BD4E00714113 /* basic.frag */,
 				1FC3ED531DF2BD4E00714113 /* basic.vs */,
 			);
@@ -165,7 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FE77A9C1DF2A13400E5BB6B /* hellotriangle.cpp in Sources */,
+				1F10DCEC1DF3ED1B00BEF58E /* mytextures.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
