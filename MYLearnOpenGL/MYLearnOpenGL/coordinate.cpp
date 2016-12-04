@@ -11,8 +11,9 @@
 
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
-
+void do_movement();
 const GLuint WIDTH = 800, HEIGHT = 600;
+bool keys[1024];
 glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
@@ -156,6 +157,7 @@ int main()
     while (!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
+        do_movement();
         
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -212,13 +214,23 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
-    GLfloat cameraSpeed = 0.1f;
-    if(key == GLFW_KEY_W)
+    
+    if(action == GLFW_PRESS)
+        keys[key] = true;
+    else if(action == GLFW_RELEASE)
+        keys[key] = false;
+}
+
+void do_movement()
+{
+    // 摄像机控制
+    GLfloat cameraSpeed = 0.01f;
+    if(keys[GLFW_KEY_W])
         cameraPos += cameraSpeed * cameraFront;
-    if(key == GLFW_KEY_S)
+    if(keys[GLFW_KEY_S])
         cameraPos -= cameraSpeed * cameraFront;
-    if(key == GLFW_KEY_A)
+    if(keys[GLFW_KEY_A])
         cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-    if(key == GLFW_KEY_D)
+    if(keys[GLFW_KEY_D])
         cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 }
