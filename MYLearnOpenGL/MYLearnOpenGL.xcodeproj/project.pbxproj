@@ -10,10 +10,10 @@
 		1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD21DF3E91000BEF58E /* awesomeface.png */; };
 		1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD31DF3E91000BEF58E /* container.jpg */; };
 		1F8100861DF425E400033213 /* mylighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8100851DF425E400033213 /* mylighting.cpp */; };
-		1F81008B1DF427A900033213 /* colors.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100871DF427A200033213 /* colors.frag */; };
-		1F81008C1DF427A900033213 /* colors.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100881DF427A200033213 /* colors.vs */; };
-		1F81008D1DF427A900033213 /* lamp.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100891DF427A200033213 /* lamp.frag */; };
-		1F81008E1DF427A900033213 /* lamp.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008A1DF427A200033213 /* lamp.vs */; };
+		1F8100911DF4406600033213 /* lighting.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008F1DF4403100033213 /* lighting.frag */; };
+		1F8100921DF4406600033213 /* lighting.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100901DF4403100033213 /* lighting.vs */; };
+		1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100891DF427A200033213 /* lamp.frag */; };
+		1F8100941DF4406D00033213 /* lamp.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008A1DF427A200033213 /* lamp.vs */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
 		840C0ED21DF1452100B25EB1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED11DF1452100B25EB1 /* OpenGL.framework */; };
 		840C0ED41DF1452B00B25EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED31DF1452B00B25EB1 /* CoreVideo.framework */; };
@@ -30,10 +30,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				1F81008B1DF427A900033213 /* colors.frag in CopyFiles */,
-				1F81008C1DF427A900033213 /* colors.vs in CopyFiles */,
-				1F81008D1DF427A900033213 /* lamp.frag in CopyFiles */,
-				1F81008E1DF427A900033213 /* lamp.vs in CopyFiles */,
+				1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */,
+				1F8100941DF4406D00033213 /* lamp.vs in CopyFiles */,
+				1F8100911DF4406600033213 /* lighting.frag in CopyFiles */,
+				1F8100921DF4406600033213 /* lighting.vs in CopyFiles */,
 				1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */,
 				1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */,
 			);
@@ -62,6 +62,8 @@
 		1F8100881DF427A200033213 /* colors.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = colors.vs; sourceTree = "<group>"; };
 		1F8100891DF427A200033213 /* lamp.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lamp.frag; sourceTree = "<group>"; };
 		1F81008A1DF427A200033213 /* lamp.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lamp.vs; sourceTree = "<group>"; };
+		1F81008F1DF4403100033213 /* lighting.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lighting.frag; sourceTree = "<group>"; };
+		1F8100901DF4403100033213 /* lighting.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lighting.vs; sourceTree = "<group>"; };
 		840C0EC41DF144AA00B25EB1 /* MYLearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MYLearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C0ECF1DF1451700B25EB1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		840C0ED11DF1452100B25EB1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -131,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				1F8100851DF425E400033213 /* mylighting.cpp */,
+				1F81008F1DF4403100033213 /* lighting.frag */,
+				1F8100901DF4403100033213 /* lighting.vs */,
 				1F8100871DF427A200033213 /* colors.frag */,
 				1F8100881DF427A200033213 /* colors.vs */,
 				1F8100891DF427A200033213 /* lamp.frag */,
