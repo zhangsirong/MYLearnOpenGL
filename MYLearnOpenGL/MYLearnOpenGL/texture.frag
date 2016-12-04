@@ -10,6 +10,6 @@ uniform sampler2D ourTexture2;
 
 void main()
 {
-	// Linearly interpolate between both textures (second texture is only slightly combined)
-    color = mix(texture(ourTexture1, TexCoord), texture(ourTexture2, TexCoord), 0.2) * vec4(ourColor, 1.0f);;
+	// 1.0 - TexCoord.x >> 设置纹理对应方向，笑脸朝右
+    color = mix(texture(ourTexture1, TexCoord), texture(ourTexture2, vec2(1.0 - TexCoord.x,TexCoord.y)), 0.2);
 }
