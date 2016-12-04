@@ -11,9 +11,11 @@
 		1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD31DF3E91000BEF58E /* container.jpg */; };
 		1F10DCE71DF3EC6C00BEF58E /* texture.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCE21DF3E95300BEF58E /* texture.frag */; };
 		1F10DCE81DF3EC6C00BEF58E /* texture.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCE31DF3E95300BEF58E /* texture.vs */; };
-		1F10DCF11DF3FAC500BEF58E /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F10DCF01DF3FAC500BEF58E /* transformations.cpp */; };
 		1F10DCF21DF3FADA00BEF58E /* transform.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCEE1DF3FA4800BEF58E /* transform.frag */; };
 		1F10DCF31DF3FADA00BEF58E /* transform.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCEF1DF3FA4800BEF58E /* transform.vs */; };
+		1F10DCFC1DF401D100BEF58E /* coordinate.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCF91DF4019E00BEF58E /* coordinate.frag */; };
+		1F10DCFD1DF401D100BEF58E /* coordinate.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCFA1DF4019E00BEF58E /* coordinate.vs */; };
+		1F10DCFE1DF4024B00BEF58E /* coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F10DCF81DF4019E00BEF58E /* coordinate.cpp */; };
 		1FC3ED541DF2BD5E00714113 /* basic.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FC3ED521DF2BD4E00714113 /* basic.frag */; };
 		1FC3ED551DF2BD5E00714113 /* basic.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FC3ED531DF2BD4E00714113 /* basic.vs */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
@@ -32,6 +34,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				1F10DCFC1DF401D100BEF58E /* coordinate.frag in CopyFiles */,
+				1F10DCFD1DF401D100BEF58E /* coordinate.vs in CopyFiles */,
 				1F10DCF21DF3FADA00BEF58E /* transform.frag in CopyFiles */,
 				1F10DCF31DF3FADA00BEF58E /* transform.vs in CopyFiles */,
 				1F10DCE71DF3EC6C00BEF58E /* texture.frag in CopyFiles */,
@@ -54,6 +58,9 @@
 		1F10DCEE1DF3FA4800BEF58E /* transform.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = transform.frag; sourceTree = "<group>"; };
 		1F10DCEF1DF3FA4800BEF58E /* transform.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = transform.vs; sourceTree = "<group>"; };
 		1F10DCF01DF3FAC500BEF58E /* transformations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transformations.cpp; sourceTree = "<group>"; };
+		1F10DCF81DF4019E00BEF58E /* coordinate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate.cpp; sourceTree = "<group>"; };
+		1F10DCF91DF4019E00BEF58E /* coordinate.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = coordinate.frag; sourceTree = "<group>"; };
+		1F10DCFA1DF4019E00BEF58E /* coordinate.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = coordinate.vs; sourceTree = "<group>"; };
 		1FC3ED521DF2BD4E00714113 /* basic.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = basic.frag; sourceTree = "<group>"; };
 		1FC3ED531DF2BD4E00714113 /* basic.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
 		1FE77A9B1DF2A13400E5BB6B /* hellotriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hellotriangle.cpp; sourceTree = "<group>"; };
@@ -124,6 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				1F10DCA51DF3E91000BEF58E /* resources */,
+				1F10DCF81DF4019E00BEF58E /* coordinate.cpp */,
+				1F10DCF91DF4019E00BEF58E /* coordinate.frag */,
+				1F10DCFA1DF4019E00BEF58E /* coordinate.vs */,
 				1F10DCF01DF3FAC500BEF58E /* transformations.cpp */,
 				1F10DCEB1DF3ED1B00BEF58E /* mytextures.cpp */,
 				840C0EC71DF144AA00B25EB1 /* hellowindow2.cpp */,
@@ -209,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F10DCF11DF3FAC500BEF58E /* transformations.cpp in Sources */,
+				1F10DCFE1DF4024B00BEF58E /* coordinate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
