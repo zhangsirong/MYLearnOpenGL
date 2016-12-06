@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD21DF3E91000BEF58E /* awesomeface.png */; };
 		1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD31DF3E91000BEF58E /* container.jpg */; };
+		1F7AEA241DF701BE00D792E0 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D090E1DF66A4E00015665 /* matrix.jpg */; };
 		1F8100861DF425E400033213 /* mylighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8100851DF425E400033213 /* mylighting.cpp */; };
 		1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100891DF427A200033213 /* lamp.frag */; };
 		1F8100941DF4406D00033213 /* lamp.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008A1DF427A200033213 /* lamp.vs */; };
@@ -33,6 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				1F7AEA241DF701BE00D792E0 /* matrix.jpg in CopyFiles */,
 				842D090D1DF6699C00015665 /* lighting_specular.png in CopyFiles */,
 				842D090A1DF65EFC00015665 /* container2_specular.png in CopyFiles */,
 				842D090B1DF65EFC00015665 /* container2.png in CopyFiles */,
