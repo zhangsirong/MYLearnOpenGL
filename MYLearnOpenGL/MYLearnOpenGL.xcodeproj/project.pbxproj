@@ -10,7 +10,7 @@
 		1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD21DF3E91000BEF58E /* awesomeface.png */; };
 		1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD31DF3E91000BEF58E /* container.jpg */; };
 		1F7AEA241DF701BE00D792E0 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D090E1DF66A4E00015665 /* matrix.jpg */; };
-		1F8100861DF425E400033213 /* mylighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8100851DF425E400033213 /* mylighting.cpp */; };
+		1F7AEA2A1DF71B2500D792E0 /* myMultipleLights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7AEA251DF710FA00D792E0 /* myMultipleLights.cpp */; };
 		1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100891DF427A200033213 /* lamp.frag */; };
 		1F8100941DF4406D00033213 /* lamp.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008A1DF427A200033213 /* lamp.vs */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
@@ -52,6 +52,9 @@
 /* Begin PBXFileReference section */
 		1F10DCD21DF3E91000BEF58E /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		1F10DCD31DF3E91000BEF58E /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		1F7AEA251DF710FA00D792E0 /* myMultipleLights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = myMultipleLights.cpp; sourceTree = "<group>"; };
+		1F7AEA271DF7116100D792E0 /* multiple_lights.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = multiple_lights.frag; sourceTree = "<group>"; };
+		1F7AEA281DF7116100D792E0 /* multiple_lights.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = multiple_lights.vs; sourceTree = "<group>"; };
 		1F8100771DF424C300033213 /* basic.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = basic.frag; sourceTree = "<group>"; };
 		1F8100781DF424C300033213 /* basic.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
 		1F8100791DF424C300033213 /* coordinate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate.cpp; sourceTree = "<group>"; };
@@ -150,7 +153,9 @@
 		1F8100841DF4253300033213 /* Lighting */ = {
 			isa = PBXGroup;
 			children = (
-				1F8100851DF425E400033213 /* mylighting.cpp */,
+				1F7AEA251DF710FA00D792E0 /* myMultipleLights.cpp */,
+				1F7AEA271DF7116100D792E0 /* multiple_lights.frag */,
+				1F7AEA281DF7116100D792E0 /* multiple_lights.vs */,
 				842D09021DF6538200015665 /* materials.frag */,
 				842D09031DF6538200015665 /* materials.vs */,
 				1F81008F1DF4403100033213 /* lighting.frag */,
@@ -159,6 +164,7 @@
 				1F8100881DF427A200033213 /* colors.vs */,
 				1F8100891DF427A200033213 /* lamp.frag */,
 				1F81008A1DF427A200033213 /* lamp.vs */,
+				1F8100851DF425E400033213 /* mylighting.cpp */,
 			);
 			path = Lighting;
 			sourceTree = "<group>";
@@ -261,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F8100861DF425E400033213 /* mylighting.cpp in Sources */,
+				1F7AEA2A1DF71B2500D792E0 /* myMultipleLights.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
