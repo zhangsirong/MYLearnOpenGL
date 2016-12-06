@@ -199,8 +199,12 @@ int main()
         lightingShader.Use();
         
         GLint lightPosLoc = glGetUniformLocation(lightingShader.Program,"light.position");
+        GLint lightSpotdirLoc    = glGetUniformLocation(lightingShader.Program, "light.direction");
+        GLint lightSpotCutOffLoc = glGetUniformLocation(lightingShader.Program, "light.cutOff");
         GLint viewPosLoc = glGetUniformLocation(lightingShader.Program, "viewPos");
         glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+        glUniform3f(lightSpotdirLoc,    camera.Front.x, camera.Front.y, camera.Front.z);
+        glUniform1f(lightSpotCutOffLoc, glm::cos(glm::radians(12.5f)));
         glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
 
         //设置光属性
