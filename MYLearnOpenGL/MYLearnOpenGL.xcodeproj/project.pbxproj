@@ -10,8 +10,6 @@
 		1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD21DF3E91000BEF58E /* awesomeface.png */; };
 		1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F10DCD31DF3E91000BEF58E /* container.jpg */; };
 		1F8100861DF425E400033213 /* mylighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8100851DF425E400033213 /* mylighting.cpp */; };
-		1F8100911DF4406600033213 /* lighting.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008F1DF4403100033213 /* lighting.frag */; };
-		1F8100921DF4406600033213 /* lighting.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100901DF4403100033213 /* lighting.vs */; };
 		1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F8100891DF427A200033213 /* lamp.frag */; };
 		1F8100941DF4406D00033213 /* lamp.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F81008A1DF427A200033213 /* lamp.vs */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
@@ -21,6 +19,11 @@
 		840C0EDF1DF1467900B25EB1 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0EDC1DF1467900B25EB1 /* libGLEW.a */; };
 		840C0EE01DF1467900B25EB1 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0EDD1DF1467900B25EB1 /* libglfw3.a */; };
 		840C0EE11DF1467900B25EB1 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0EDE1DF1467900B25EB1 /* libSOIL.a */; };
+		842D09041DF6582E00015665 /* materials.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09021DF6538200015665 /* materials.frag */; };
+		842D09051DF6582E00015665 /* materials.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09031DF6538200015665 /* materials.vs */; };
+		842D090A1DF65EFC00015665 /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09081DF65EEF00015665 /* container2_specular.png */; };
+		842D090B1DF65EFC00015665 /* container2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09091DF65EEF00015665 /* container2.png */; };
+		842D090D1DF6699C00015665 /* lighting_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D090C1DF6698A00015665 /* lighting_specular.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,10 +33,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				842D090D1DF6699C00015665 /* lighting_specular.png in CopyFiles */,
+				842D090A1DF65EFC00015665 /* container2_specular.png in CopyFiles */,
+				842D090B1DF65EFC00015665 /* container2.png in CopyFiles */,
+				842D09041DF6582E00015665 /* materials.frag in CopyFiles */,
+				842D09051DF6582E00015665 /* materials.vs in CopyFiles */,
 				1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */,
 				1F8100941DF4406D00033213 /* lamp.vs in CopyFiles */,
-				1F8100911DF4406600033213 /* lighting.frag in CopyFiles */,
-				1F8100921DF4406600033213 /* lighting.vs in CopyFiles */,
 				1F10DCE51DF3EC4E00BEF58E /* awesomeface.png in CopyFiles */,
 				1F10DCE61DF3EC4E00BEF58E /* container.jpg in CopyFiles */,
 			);
@@ -72,6 +78,12 @@
 		840C0EDC1DF1467900B25EB1 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = MYLearnOpenGL/lib/libGLEW.a; sourceTree = "<group>"; };
 		840C0EDD1DF1467900B25EB1 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = MYLearnOpenGL/lib/libglfw3.a; sourceTree = "<group>"; };
 		840C0EDE1DF1467900B25EB1 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = MYLearnOpenGL/lib/libSOIL.a; sourceTree = "<group>"; };
+		842D09021DF6538200015665 /* materials.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = materials.frag; sourceTree = "<group>"; };
+		842D09031DF6538200015665 /* materials.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = materials.vs; sourceTree = "<group>"; };
+		842D09081DF65EEF00015665 /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
+		842D09091DF65EEF00015665 /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
+		842D090C1DF6698A00015665 /* lighting_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_specular.png; sourceTree = "<group>"; };
+		842D090E1DF66A4E00015665 /* matrix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = matrix.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,10 @@
 		1F10DCD11DF3E91000BEF58E /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				842D090E1DF66A4E00015665 /* matrix.jpg */,
+				842D090C1DF6698A00015665 /* lighting_specular.png */,
+				842D09081DF65EEF00015665 /* container2_specular.png */,
+				842D09091DF65EEF00015665 /* container2.png */,
 				1F10DCD21DF3E91000BEF58E /* awesomeface.png */,
 				1F10DCD31DF3E91000BEF58E /* container.jpg */,
 			);
@@ -133,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				1F8100851DF425E400033213 /* mylighting.cpp */,
+				842D09021DF6538200015665 /* materials.frag */,
+				842D09031DF6538200015665 /* materials.vs */,
 				1F81008F1DF4403100033213 /* lighting.frag */,
 				1F8100901DF4403100033213 /* lighting.vs */,
 				1F8100871DF427A200033213 /* colors.frag */,
