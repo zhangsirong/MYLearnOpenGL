@@ -56,7 +56,7 @@ int main()
     glEnable(GL_DEPTH_TEST);
     
     
-    Shader lightingShader("lighting.vs", "lighting.frag");
+    Shader lightingShader("materials.vs", "materials.frag");
     Shader lampShader("lamp.vs", "lamp.frag");
     
     GLfloat vertices[] = {
@@ -132,7 +132,6 @@ int main()
     
     while (!glfwWindowShouldClose(window))
     {
-
         GLfloat currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
@@ -147,15 +146,29 @@ int main()
         lightPos.y = sin(glfwGetTime() / 2.0f) * 1.0f;
         
         lightingShader.Use();
-        GLint objectColorLoc = glGetUniformLocation(lightingShader.Program, "objectColor");
-        GLint lightColorLoc  = glGetUniformLocation(lightingShader.Program, "lightColor");
-        GLint lightPosLoc = glGetUniformLocation(lightingShader.Program, "lightPos");
-        GLint viewPosLoc = glGetUniformLocation(lightingShader.Program, "viewPos");
         
-        glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);
-        glUniform3f(lightColorLoc,  1.0f, 1.0f, 1.0f);
+        GLint lightPosLoc = glGetUniformLocation(lightingShader.Program,"light.position");
+        GLint viewPosLoc = glGetUniformLocation(lightingShader.Program, "viewPos");
         glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
         glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
+
+        //设置光属性
+        glm::vec3 lightColor;
+        lightColor.x = sin(glfwGetTime() * 2.0f);
+        lightColor.y = sin(glfwGetTime() * 0.7f);
+        lightColor.z = sin(glfwGetTime() * 1.3f);
+        glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f);
+        glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
+        
+        glUniform3f(glGetUniformLocation(lightingShader.Program,"light.ambient"), ambientColor.x , ambientColor.y, ambientColor.z);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light.diffuse"),  diffuseColor.x, diffuseColor.y, diffuseColor.z);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "light.specular"), 1.0f, 1.0f, 1.0f);
+        
+        //设置材质属性
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"),   1.0f, 0.5f, 0.31f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"),   1.0f, 0.5f, 0.31f);
+        glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"),  0.5f, 0.5f, 0.5f);
+        glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 32.0f);
         
         //坐标变化
         glm::mat4 view;
