@@ -21,6 +21,9 @@
 		840C0EE11DF1467900B25EB1 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0EDE1DF1467900B25EB1 /* libSOIL.a */; };
 		842D09041DF6582E00015665 /* materials.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09021DF6538200015665 /* materials.frag */; };
 		842D09051DF6582E00015665 /* materials.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09031DF6538200015665 /* materials.vs */; };
+		842D090A1DF65EFC00015665 /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09081DF65EEF00015665 /* container2_specular.png */; };
+		842D090B1DF65EFC00015665 /* container2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D09091DF65EEF00015665 /* container2.png */; };
+		842D090D1DF6699C00015665 /* lighting_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 842D090C1DF6698A00015665 /* lighting_specular.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +33,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				842D090D1DF6699C00015665 /* lighting_specular.png in CopyFiles */,
+				842D090A1DF65EFC00015665 /* container2_specular.png in CopyFiles */,
+				842D090B1DF65EFC00015665 /* container2.png in CopyFiles */,
 				842D09041DF6582E00015665 /* materials.frag in CopyFiles */,
 				842D09051DF6582E00015665 /* materials.vs in CopyFiles */,
 				1F8100931DF4406D00033213 /* lamp.frag in CopyFiles */,
@@ -74,6 +80,10 @@
 		840C0EDE1DF1467900B25EB1 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = MYLearnOpenGL/lib/libSOIL.a; sourceTree = "<group>"; };
 		842D09021DF6538200015665 /* materials.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = materials.frag; sourceTree = "<group>"; };
 		842D09031DF6538200015665 /* materials.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = materials.vs; sourceTree = "<group>"; };
+		842D09081DF65EEF00015665 /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
+		842D09091DF65EEF00015665 /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
+		842D090C1DF6698A00015665 /* lighting_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_specular.png; sourceTree = "<group>"; };
+		842D090E1DF66A4E00015665 /* matrix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = matrix.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,10 @@
 		1F10DCD11DF3E91000BEF58E /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				842D090E1DF66A4E00015665 /* matrix.jpg */,
+				842D090C1DF6698A00015665 /* lighting_specular.png */,
+				842D09081DF65EEF00015665 /* container2_specular.png */,
+				842D09091DF65EEF00015665 /* container2.png */,
 				1F10DCD21DF3E91000BEF58E /* awesomeface.png */,
 				1F10DCD31DF3E91000BEF58E /* container.jpg */,
 			);
