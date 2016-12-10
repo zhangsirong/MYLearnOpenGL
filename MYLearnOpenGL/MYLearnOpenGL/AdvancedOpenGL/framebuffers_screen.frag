@@ -21,10 +21,16 @@ void main()
                              vec2(0.0f,    -offset), // bottom-center
                              vec2(offset,  -offset)  // bottom-right
                              );
-    
+    //锐化
+//    float kernel[9] = float[](
+//                              -1, -1, -1,
+//                              -1,  9, -1,
+//                              -1, -1, -1
+//                              );
+    //边检测
     float kernel[9] = float[](
                               -1, -1, -1,
-                              -1,  9, -1,
+                              -1,  8, -1,
                               -1, -1, -1
                               );
     
