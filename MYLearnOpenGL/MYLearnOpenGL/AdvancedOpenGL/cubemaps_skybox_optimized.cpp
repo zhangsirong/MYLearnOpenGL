@@ -13,6 +13,7 @@ using namespace std;
 #include <glm/gtc/type_ptr.hpp>
 #include <learnopengl/shader.h>
 #include <learnopengl/camera.h>
+#include <learnopengl/model.h>
 
 GLuint WIDTH = 800, HEIGHT = 600;
 
@@ -180,7 +181,9 @@ int main()
     faces.push_back("back.jpg");
     faces.push_back("front.jpg");
     
-    GLuint cubemapTexture = loadCubemap(faces);
+    GLuint skyboxTexture = loadCubemap(faces);
+    
+    Model nanosuit("nanosuit.obj");
     
     while(!glfwWindowShouldClose(window))
     {
@@ -195,35 +198,34 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
-        glDepthMask(GL_FALSE);
-        skyboxShader.Use();
-        glm::mat4 view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
-        glm::mat4 projection = glm::perspective(camera.Zoom, (float)WIDTH/(float)HEIGHT, 0.1f, 100.0f);
-        glUniformMatrix4fv(glGetUniformLocation(skyboxShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(glGetUniformLocation(skyboxShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
-        // 天空盒
-        glBindVertexArray(skyboxVAO);
-        glActiveTexture(GL_TEXTURE0);
-        glUniform1i(glGetUniformLocation(shader.Program, "skybox"), 0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-        glDepthMask(GL_TRUE);
-        
         shader.Use();
         glm::mat4 model;
-        view = camera.GetViewMatrix();
-        
+        glm::mat4 view = camera.GetViewMatrix();
+        glm::mat4 projection = glm::perspective(camera.Zoom, (float)WIDTH/(float)HEIGHT, 0.1f, 100.0f);
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
-        // 箱子
-        glBindVertexArray(cubeVAO);
+        glUniform3f(glGetUniformLocation(shader.Program, "cameraPos"), camera.Position.x, camera.Position.y, camera.Position.z);
         
+        glActiveTexture(GL_TEXTURE3);
+        glUniform1i(glGetUniformLocation(shader.Program, "skybox"), 3);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, skyboxTexture);
+        nanosuit.Draw(shader);
+        
+        // 画天空盒
+        glDepthFunc(GL_LEQUAL);
+        skyboxShader.Use();
+        view = glm::mat4(glm::mat3(camera.GetViewMatrix()));
+        glUniformMatrix4fv(glGetUniformLocation(skyboxShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(glGetUniformLocation(skyboxShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+
+        glBindVertexArray(skyboxVAO);
         glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);//反射天空的箱子
+        glUniform1i(glGetUniformLocation(shader.Program, "skybox"), 0);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, skyboxTexture);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
+        glDepthFunc(GL_LESS);
         
         glfwSwapBuffers(window);
     }
