@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1FBA1A0D1DFBBF9700D1297C /* libassimp.3.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBA1A0C1DFBBF9700D1297C /* libassimp.3.1.1.dylib */; };
-		1FBA1A171DFBC34900D1297C /* marble.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A111DFBC2EE00D1297C /* marble.jpg */; };
-		1FBA1A181DFBC34900D1297C /* metal.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A121DFBC2EE00D1297C /* metal.png */; };
-		1FBA1A1D1DFBD42600D1297C /* stencilTesting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA1A1C1DFBD42600D1297C /* stencilTesting.cpp */; };
-		1FBA1A1E1DFBD48900D1297C /* stencil_single_color.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A191DFBD42600D1297C /* stencil_single_color.frag */; };
-		1FBA1A1F1DFBD48900D1297C /* stencil_testing.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A1A1DFBD42600D1297C /* stencil_testing.frag */; };
-		1FBA1A201DFBD48900D1297C /* stencil_testing.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A1B1DFBD42600D1297C /* stencil_testing.vs */; };
+		1FBA1A241DFBDEBD00D1297C /* blending_discard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA1A211DFBDEBD00D1297C /* blending_discard.cpp */; };
+		1FBA1A261DFBE1BF00D1297C /* blending_discard.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A221DFBDEBD00D1297C /* blending_discard.frag */; };
+		1FBA1A271DFBE1BF00D1297C /* blending_discard.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A231DFBDEBD00D1297C /* blending_discard.vs */; };
+		1FBA1A281DFBE1BF00D1297C /* grass.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A251DFBDFE300D1297C /* grass.png */; };
+		1FBA1A291DFBE1BF00D1297C /* marble.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A111DFBC2EE00D1297C /* marble.jpg */; };
+		1FBA1A2A1DFBE1BF00D1297C /* metal.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FBA1A121DFBC2EE00D1297C /* metal.png */; };
 		840C0ED01DF1451700B25EB1 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ECF1DF1451700B25EB1 /* IOKit.framework */; };
 		840C0ED21DF1452100B25EB1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED11DF1452100B25EB1 /* OpenGL.framework */; };
 		840C0ED41DF1452B00B25EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C0ED31DF1452B00B25EB1 /* CoreVideo.framework */; };
@@ -30,11 +30,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				1FBA1A1E1DFBD48900D1297C /* stencil_single_color.frag in CopyFiles */,
-				1FBA1A1F1DFBD48900D1297C /* stencil_testing.frag in CopyFiles */,
-				1FBA1A201DFBD48900D1297C /* stencil_testing.vs in CopyFiles */,
-				1FBA1A171DFBC34900D1297C /* marble.jpg in CopyFiles */,
-				1FBA1A181DFBC34900D1297C /* metal.png in CopyFiles */,
+				1FBA1A261DFBE1BF00D1297C /* blending_discard.frag in CopyFiles */,
+				1FBA1A271DFBE1BF00D1297C /* blending_discard.vs in CopyFiles */,
+				1FBA1A281DFBE1BF00D1297C /* grass.png in CopyFiles */,
+				1FBA1A291DFBE1BF00D1297C /* marble.jpg in CopyFiles */,
+				1FBA1A2A1DFBE1BF00D1297C /* metal.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +113,10 @@
 		1FBA1A1A1DFBD42600D1297C /* stencil_testing.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = stencil_testing.frag; sourceTree = "<group>"; };
 		1FBA1A1B1DFBD42600D1297C /* stencil_testing.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = stencil_testing.vs; sourceTree = "<group>"; };
 		1FBA1A1C1DFBD42600D1297C /* stencilTesting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stencilTesting.cpp; sourceTree = "<group>"; };
+		1FBA1A211DFBDEBD00D1297C /* blending_discard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = blending_discard.cpp; sourceTree = "<group>"; };
+		1FBA1A221DFBDEBD00D1297C /* blending_discard.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = blending_discard.frag; sourceTree = "<group>"; };
+		1FBA1A231DFBDEBD00D1297C /* blending_discard.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = blending_discard.vs; sourceTree = "<group>"; };
+		1FBA1A251DFBDFE300D1297C /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
 		840C0EC41DF144AA00B25EB1 /* MYLearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MYLearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		840C0ECF1DF1451700B25EB1 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		840C0ED11DF1452100B25EB1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -160,6 +164,7 @@
 		1F10DCD11DF3E91000BEF58E /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				1FBA1A251DFBDFE300D1297C /* grass.png */,
 				1FBA1A111DFBC2EE00D1297C /* marble.jpg */,
 				1FBA1A121DFBC2EE00D1297C /* metal.png */,
 				842D090E1DF66A4E00015665 /* matrix.jpg */,
@@ -273,6 +278,9 @@
 		1FBA1A0E1DFBC1B400D1297C /* AdvancedOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				1FBA1A211DFBDEBD00D1297C /* blending_discard.cpp */,
+				1FBA1A221DFBDEBD00D1297C /* blending_discard.frag */,
+				1FBA1A231DFBDEBD00D1297C /* blending_discard.vs */,
 				1FBA1A191DFBD42600D1297C /* stencil_single_color.frag */,
 				1FBA1A1A1DFBD42600D1297C /* stencil_testing.frag */,
 				1FBA1A1B1DFBD42600D1297C /* stencil_testing.vs */,
@@ -385,7 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBA1A1D1DFBD42600D1297C /* stencilTesting.cpp in Sources */,
+				1FBA1A241DFBDEBD00D1297C /* blending_discard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
