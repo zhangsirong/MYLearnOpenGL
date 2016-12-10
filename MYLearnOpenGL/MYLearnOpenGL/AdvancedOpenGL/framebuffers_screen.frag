@@ -9,6 +9,6 @@ void main()
 {
     color = texture(screenTexture, TexCoords);
 //    color = vec4(vec3(1.0 - texture(screenTexture, TexCoords)), 1.0);//反色
-    float average = (color.r + color.g + color.b) / 3.0;
+    float average = 0.2126 * color.r + 0.7152 * color.g + 0.0722 * color.b;//加权灰度
     color = vec4(average, average, average, 1.0);   //灰度
 }
